@@ -1,0 +1,204 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: #8b2b02;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.main {
+  margin-top: 8rem;
+  width: 90%;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meals {
+  text-align: center;
+  margin: 2rem auto;
+  animation: meals-appear 1s ease-out forwards;
+}
+
+.titleSection {
+  text-align: center;
+  max-width: 45rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: #383838;
+  color: white;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+}
+
+.titleSection h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.titleSection p {
+  margin-bottom: 0.5rem;
+}
+
+.mealItem {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.mealItem h3 {
+  margin-top: 2rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0 0 0.25rem 0;
+  color: #363636;
+}
+/* style={{ fontSize: "1.75rem", }} */
+
+.description {
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+  color: #666;
+}
+
+.price {
+  margin-top: 0.25rem;
+  text-align: center;
+  font-weight: bold;
+  color: #8b2b02;
+  font-size: 1.25rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #8b2b02;
+  border: 1px solid #8b2b02;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.button:hover,
+.button:active {
+  background-color: #641e03;
+  border-color: #641e03;
+}
+
+.adminButton {
+  composes: button;
+  margin-left: 0.25rem;
+  background-color: #4d1601;
+  border-color: #4d1601;
+}
+
+.editButton {
+  composes: button;
+  background-color: #77ec77;
+  border-color: #77ec77;
+  color: #fff;
+}
+
+.deleteButton {
+  composes: button;
+  /* padding: 0.75rem 2rem; */
+  margin-left: 0.25rem;
+  margin-top: 0.25rem;
+  background-color: #ca3e51;
+  border-color: #ca3e51;
+  color: #fff;
+}
+
+.deleteButton:hover,
+.deleteButton:active {
+  background-color: #a10b1d;
+  border-color: #a10b1d;
+}
+
+.form {
+  width: 25vw;
+  margin: 1rem 0;
+  height: 19rem;
+  overflow: auto;
+}
+
+.formControl {
+  margin-bottom: 0.5rem;
+}
+
+.formControl label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.formControl input,
+.formControl textarea {
+  font: inherit;
+  padding: 0.35rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}
+
+.addMealForm {
+  /* color: white; */
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 14px;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 40rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.closeButton {
+  border: 2px solid red;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.closeButton:hover {
+  color: #333;
+}
+
+@keyframes meals-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
